@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 7 – Korisnički profil</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px; max-width: 800px; margin: auto; text-align: center;">
+  <h1>👤 Dobrodošao, <%= name %></h1>
+
+  <% if (isAdmin) { %>
+    <p><strong>Status:</strong> Administrator</p>
+    <p><strong>Flag:</strong> <%= flag %></p>
+
+    <% if (showFlagForm) { %>
+      <form method="GET" action="/level7/profile" style="margin-top: 30px;">
+        <input type="hidden" name="user_id" value="1" />
+        <input type="text" name="flagInput" placeholder="Unesi flag za nastavak" required
+               style="padding: 10px; font-size: 16px; width: 250px;" />
+        <button type="submit" style="padding: 10px 20px; font-size: 16px;">Pošalji flag</button>
+      </form>
+    <% } %>
+
+  <% } else { %>
+    <p><strong>Status:</strong> Obični korisnik</p>
+    <p>Nažalost, flag nije dostupan za tvoj korisnički račun.</p>
+  <% } %>
+
+  <hr style="margin: 40px auto; width: 60%;" />
+
+  <img src="https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif"
+       alt="Profil hint" style="max-width: 100%; border-radius: 8px;" />
+
+  <p style="margin-top: 10px; color: gray;">
+    💡 Hint: Pristup pravom ID-u može promijeniti sve...
+    <br />Jesmo li sigurni da svatko vidi samo svoj profil?
+  </p>
+
+  <!-- Suptilni trag -->
+  <footer id="footer" style="margin-top: 50px; color: #999;"
+          data-hint="1">
+    © INCTF 2025 – Gledaj pažljivo kamo URL vodi.
+  </footer>
+</body>
+</html>

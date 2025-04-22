@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 1 – Prvi izazov</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px; max-width: 800px; margin: auto; text-align: center;">
+  <h1>🎯 Dobrodošao na Razinu 1</h1>
+
+  <p>Ovo je tvoj prvi izazov. Negdje na ovoj stranici se skriva <strong>flag</strong>...</p>
+  <p><em>Možda je vrijeme da pogledaš malo dublje... 👀</em></p>
+
+  <!-- <%= "flag{view_source_is_cool}" %> -->
+
+  <form method="POST" style="margin-top: 30px;">
+    <input type="text" name="flag" placeholder="Unesi flag" required
+           style="padding: 10px; font-size: 16px; width: 250px;" />
+    <button type="submit" style="padding: 10px 20px; font-size: 16px;">Pošalji</button>
+  </form>
+
+  <% if (error) { %>
+    <p style="color: red; margin-top: 20px;"><%= error %></p>
+  <% } %>
+
+  <hr style="margin: 40px auto; width: 60%;" />
+
+  <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif"
+       alt="View Source Hint" style="max-width: 100%; border-radius: 8px;" />
+  <p style="margin-top: 10px; color: gray;">💡 Hint: Ponekad komentar ipak nije suvišan.</p>
+</body>
+</html>
