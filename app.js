@@ -43,6 +43,24 @@ app.use("/level8", level8);
 import level9 from "./routes/level9.js";
 app.use("/level9", level9);
 
+import level10 from "./routes/level10.js";
+app.use("/level10", level10);
+
+import level11 from "./routes/level11.js";
+app.use("/level11", level11);
+
+import level12 from "./routes/level12.js";
+app.use("/level12", level12);
+
+import level13 from "./routes/level13.js";
+app.use("/level13", level13);
+
+import level14 from "./routes/level14.js";
+app.use("/level14", level14);
+
+import level15 from "./routes/level15.js";
+app.use("/level15", level15);
+
 import congratulations from "./routes/congratulations.js";
 app.use("/congratulations", congratulations);
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 10 – Substitucijska šifra</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px; max-width: 900px; margin: auto; text-align: center;">
+  <h1>🔐 Razina 10: Kriptografska zagonetka</h1>
+
+  <p>
+    Sljedeća poruka je šifrirana zamjenom znakova.  
+    <br />Koristi jednostavnu logiku pomaka u abecedi.
+  </p>
+
+  <p><strong>Šifrirani tekst:</strong></p>
+  <code>ujfw{ymnx%nx%tzy%gjfwj}</code>
+
+  
+
+  <form method="POST" style="margin-top: 40px;">
+    <input type="text" name="flagInput" placeholder="Unesi dekriptirani flag" required
+           style="padding: 10px; font-size: 16px; width: 300px;" />
+    <button type="submit" style="padding: 10px 20px;">Pošalji flag</button>
+  </form>
+
+  <% if (error) { %>
+    <p style="color: red; margin-top: 20px;"><%= error %></p>
+  <% } %>
+
+  <% if (success) { %>
+    <p style="color: green; margin-top: 20px;"><strong>Točno!</strong> Prelaziš na sljedeću razinu.</p>
+  <% } %>
+
+  <hr style="margin: 40px auto; width: 60%;" />
+
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW80bGs3MDV1Y2ltaXZ0Ym05Zjcwcjk5bDlhZ240NWl3ajhleW8zbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AUMxbiDIzBOiFGA71r/giphy.gif"
+       alt="Cipher gif" style="max-width: 100%; border-radius: 8px;" />
+
+  <p style="color: gray;">
+    💡 Hint: Pomakni svako slovo unatrag za 5 mjesta. Znakovi ostaju isti.
+  </p>
+
+  <footer id="footer" style="margin-top: 50px; color: #999;"
+          data-hint="Caesar šifra koristi jednaki pomak za sva slova. Ovdje je to -5.">
+    © INCTF 2025 – Ključ je u abecedi.
+  </footer>
+</body>
+</html>

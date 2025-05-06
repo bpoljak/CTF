@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 13 – Gledaj zaglavlja</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px; text-align: center;">
+  <h1>📡 Razina 13: Šapat u zaglavljima</h1>
+
+  <p>Netko nešto skriva, ali ne tamo gdje inače gledaš.</p>
+  <p><strong>Hint:</strong> Provjeri mrežni promet – možda <em>zaglavlja</em> znaju više nego sadržaj.</p>
+  <p>Posjeti <code>/level13/ping</code></p>
+
+  <img src="https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif"
+       alt="network spy" style="max-width: 100%; border-radius: 8px; margin: 30px 0;" />
+
+  <form method="POST">
+    <input type="text" name="flag" placeholder="Unesi flag" required
+           style="padding: 10px; font-size: 16px; width: 300px;" />
+    <button type="submit" style="padding: 10px 20px;">Pošalji</button>
+  </form>
+
+  <% if (error) { %>
+    <p style="color: red; margin-top: 20px;"><%= error %></p>
+  <% } %>
+
+  <footer id="footer" style="margin-top: 50px; color: #aaa;"
+          data-hint="Pogledaj u Burp Suite 'Response Headers' tab.">
+    © INCTF 2025 – Neke tajne ne treba gledati. Treba ih njuškati.
+  </footer>
+</body>
+</html>

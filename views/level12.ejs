@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 12 – SSTI</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px; text-align: center;">
+  <h1>🧩 Razina 12: Personalizirani pozdrav</h1>
+
+  <p>Unesi svoje ime da ti aplikacija poželi dobrodošlicu. 🤝</p>
+
+  <form method="POST" style="margin-top: 20px;">
+    <input type="text" name="name" placeholder="Tvoje ime"
+           style="padding: 10px; font-size: 16px; width: 250px;" required />
+    <button type="submit" style="padding: 10px 20px; font-size: 16px;">Pošalji</button>
+  </form>
+
+  <!--
+    💡 Hint: Sustav koristi predloške za prikaz podataka.
+    Što bi se dogodilo kada bi poslao {{7*7}}?
+    Razmisli što tražiš i kako to možeš iskoristiti.
+  -->
+
+  <footer style="margin-top: 50px; color: #999;">
+    © INCTF 2025 – Predlošci su moćni, ali i opasni.
+  </footer>
+</body>
+</html>

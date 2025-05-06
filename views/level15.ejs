@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 15 – Browser magija</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding: 50px;">
+  <h1>🧠 Razina 15: Tko gleda kroz pravi prozor?</h1>
+  <p><strong>Hint:</strong> Neke stranice govore istinu... ali samo ako im se predstaviš na pravi način.</p>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <% if (showFlag) { %>
+    <p><strong>Flag:</strong> <%= flag %></p>
+  <% } %>
+
+  <form method="POST" style="margin-top: 40px;">
+    <input type="text" name="flag" placeholder="Unesi flag" required
+           style="padding: 10px; font-size: 16px; width: 300px;" />
+    <button type="submit" style="padding: 10px 20px;">Pošalji flag</button>
+  </form>
+
+  <div id="output" style="margin-top: 50px; color: green; font-size: 18px;"></div>
+
+  <script>
+    (function(){
+      const u = navigator.userAgent;
+      const b64 = "ZmxhZ3tieW91cl91c2VyYWdlbnRfaXNfdGhlX2tleX0=";
+      const decoded = atob(b64);
+
+      console.log("💡 Hint: Tvoj identitet se definira preko User-Agent headera.");
+
+      if (u.includes("CTF-Player-9000")) {
+        document.getElementById("output").innerText = "Flag: " + decoded;
+      }
+    })();
+  </script>
+
+  <footer style="margin-top: 80px; color: #999;">
+    © INCTF 2025 – Gledaj kroz pravi prozor, i vidjet ćeš istinu.
+
+    <!-- hint: pogledaj navigator.userAgent -->
+    <!-- hint2: promijeni ga u "CTF-Player-9000" -->
+    <!-- hint3: koristi DevTools ili Burp Suite -->
+
+    <div style="display: none;" id="hidden-hint">👀 Pogledaj JavaScript u izvoru stranice.</div>
+  </footer>
+</body>
+</html>

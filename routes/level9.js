@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
   if (flagInput) {
     if (flagInput === "flag{xss_from_the_inside}") {
       res.cookie("level9_passed", true);
-      return res.redirect("/congratulations");
+      return res.redirect("/level10");
     }
 
     return res.render("level9", {

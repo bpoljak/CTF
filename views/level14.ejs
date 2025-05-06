@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Razina 14 – JWT Manipulacija</title>
+</head>
+<body style="font-family: sans-serif; padding: 40px; max-width: 800px; margin: auto; text-align: center;">
+  <h1>🔓 Razina 14: Tko si ti stvarno?</h1>
+
+  <p>Aplikacija koristi tokene za provjeru tvoje uloge...</p>
+  <p><strong>Hint:</strong> Pogledaj svoje kolačiće – možda se možeš predstaviti kao netko drugi.</p>
+
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGQ2dHkzdWcyNHJvcDJ0cTI5bTUyOGd2bHh1aGhkbDB3b3B5ZWpuYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26gs8nKrs7uduirss/giphy.gif"
+       alt="jwt" style="max-width: 100%; border-radius: 8px; margin: 30px 0;" />
+
+  <% if (flag) { %>
+    <p><strong>Flag:</strong> <%= flag %></p>
+
+    <form method="POST">
+      <input type="text" name="flag" placeholder="Unesi flag" required
+             style="padding: 10px; font-size: 16px; width: 300px;" />
+      <button type="submit" style="padding: 10px 20px;">Pošalji flag</button>
+    </form>
+  <% } %>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <footer style="margin-top: 50px; color: #999;"
+          data-hint="Dekodiraj JWT. Promijeni role u admin, potpiši s 'secret', pošalji kao token cookie.">
+    © INCTF 2025 – Tko kontrolira token, kontrolira svijet.
+  </footer>
+</body>
+</html>
