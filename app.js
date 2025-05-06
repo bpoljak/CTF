@@ -71,6 +71,6 @@ app.get("/supersecretpage", (req, res) => {
   res.send("Congrats! The flag is: flag{google_should_not_see_this}");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running at http://0.0.0.0:${PORT}`);
 });
